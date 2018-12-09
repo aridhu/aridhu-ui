@@ -1,0 +1,37 @@
+.example-fill-remaining-space {
+  flex: 1 1 auto;
+}
+.card-signin {
+  background: salmon;
+  top: 5px;
+  position: absolute;
+  padding: 2%;
+  height: 80%;
+}
+
+.card-content {
+  background: burlywood;
+  top: 5px;
+  left: 5px;
+  position: absolute;
+  padding: 2%;
+  width: 60%;
+  height: 80%
+}
+
+.example-header-image {
+  background-image: url('../../assets/google-app-icon.png');
+  background-size: cover;
+}
+
+.cashflow{
+  max-width: 1000px;
+}
+
+mat-card-title {
+  font-weight: bolder;
+}
+
+mat-card-content {
+  margin: 2%;
+}

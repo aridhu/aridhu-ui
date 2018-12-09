@@ -1,0 +1,36 @@
+.display-img{
+    padding: 10px;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+  }
+.navigation{
+    background: salmon;
+    top: 5px;
+    position: absolute;
+    padding: 2%;
+    height: 80%;
+}
+.example-fill-remaining-space {
+    /* This fills the remaining space, by using flexbox. 
+       Every toolbar row uses a flexbox row layout. */
+    flex: 1 1 auto;
+  }
+
+  .maincontent {
+      background: burlywood;
+      width: 100%;
+      top: 5px;
+      position: absolute;
+      padding: 2%;
+      height: 80%;
+  }
+
+  mat-card-title{
+      font-weight: bolder;
+  }
+
+  .card-home{
+      padding: 2%;
+      margin: 1%;
+  }

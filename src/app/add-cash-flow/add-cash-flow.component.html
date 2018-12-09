@@ -1,0 +1,33 @@
+<mat-tab-group>
+    <mat-tab *ngFor='let incomecat of incomeCategory | async'>
+      <ng-template mat-tab-label>
+        <mat-icon class="example-tab-icon">thumb_up</mat-icon>
+        {{incomecat.source}}
+      </ng-template>
+        income-category: {{incomecat.source}}
+        <mat-list>
+          <mat-list-item>Pay Date: 9/30/2018</mat-list-item>
+          <mat-list-item>Gross Pay: $6,875.53</mat-list-item>
+          <mat-list-item>Net Pay: 3,689.06</mat-list-item>
+          
+        </mat-list>
+        <mat-list>
+            <mat-list-item>Federal Income Tax: 1,108.86</mat-list-item>
+            <mat-list-item>Social Security Tax: 400.11</mat-list-item>
+            <mat-list-item>Medicare Tax: 93.57</mat-list-item>
+            <mat-list-item>CA State Income Tax: 123.54</mat-list-item>
+            <mat-list-item>NJ State Income Tax: 303.46</mat-list-item>
+            <mat-list-item>NJ SUI/SDI Tax: 0.00</mat-list-item>
+          </mat-list>
+
+        <mat-list>
+            <mat-list-item>Health FSA: 20.83</mat-list-item>
+            <mat-list-item>HSA Plan: 250.00</mat-list-item>
+            <mat-list-item>Pretax Dental: 27.11</mat-list-item>
+            <mat-list-item>Pretax Medical: 142.48</mat-list-item>
+            <mat-list-item>Pretax Vision: 6.50</mat-list-item>
+            <mat-list-item>Vol Acc 40/20: 22.45</mat-list-item>
+            <mat-list-item>401K: 687.56</mat-list-item>
+          </mat-list>
+    </mat-tab>
+</mat-tab-group>
