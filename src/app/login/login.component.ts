@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
   password: string;
 
   constructor(private authServ: AuthService, private router: Router, private noteSvc: NotificationServicesService) {
-    //this.authServ.logout();
+     // this.authServ.logout();
   }
 
   ngOnInit() {
@@ -46,7 +46,7 @@ export class LoginComponent implements OnInit {
         const isAnonymous = user.isAnonymous;
         const uid = user.uid;
         const providerData = user.providerData;
-        this.router.navigate(['home/summary']);
+        this.router.navigate(['home/opty']);
       } else {
         this.userObj = null;
       }

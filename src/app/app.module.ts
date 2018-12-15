@@ -19,6 +19,8 @@ import { AddCashFlowComponent } from './add-cash-flow/add-cash-flow.component';
 import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from './routing.module';
 import { RouterModule } from '@angular/router';
+import { OptyComponent } from './opty/opty.component';
+import { AssetComponent } from './asset/asset.component';
 
 
 @NgModule({
@@ -29,7 +31,9 @@ import { RouterModule } from '@angular/router';
     LoginComponent,
     CashFlowComponent,
     AddCashFlowComponent,
-    HomeComponent
+    HomeComponent,
+    OptyComponent,
+    AssetComponent
   ],
   imports: [
     BrowserModule,
@@ -44,9 +48,9 @@ import { RouterModule } from '@angular/router';
     AngularFireModule.initializeApp(environment.firebase),
     RouterModule.forRoot(
       [
-        { path: "", component: LoginComponent}
-      ], { 
-           useHash: true 
+        { path: '', component: LoginComponent}
+      ], {
+           useHash: true
          }
     )
   ],

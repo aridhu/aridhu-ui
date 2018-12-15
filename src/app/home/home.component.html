@@ -1,37 +1,57 @@
 
-  <mat-toolbar color="primary">
-    <span>Aridhu Demo</span>
+  <mat-toolbar >
+    <span>Aridhu, Inc.</span>
     <span class="example-fill-remaining-space"></span>
-    <span>Hello {{kaasuuser?.displayName || 'User'}}</span>
-    <span class="example-fill-remaining-space"></span>
-    <span>Aridhu, Inc.,</span>
+    <!--<span>Hello {{kaasuuser?.displayName || 'User'}}</span>-->
+      <span>Renewal Manager</span>
+      <span class="example-fill-remaining-space"></span>
+      <button mat-icon-button (click)="onGLogout()">
+      <mat-icon  class="icon">exit_to_app</mat-icon>
+      </button>
   </mat-toolbar>
-<mat-grid-list cols="4" rowHeight="100px">
-  <mat-grid-tile [colspan]="1" [rowspan]="9">
-    <div  class="navigation">
-        <mat-card class="card-home">
-            <mat-card-header>
-              <img [src]="kaasuuser?.photoURL" class="display-img"/>
-              <mat-card-title>{{kaasuuser?.displayName}}</mat-card-title>
-              <mat-card-subtitle>manage your cash flow</mat-card-subtitle>
-            </mat-card-header>
-            <mat-card-content>
-                <mat-list role="list" >
-                    <mat-list-item role="listitem"><a routerLink="/home/summary" routerLinkActive="active">Home</a></mat-list-item>
-                    <mat-list-item role="listitem"><a routerLink="/home/add-cash-flow" routerLinkActive="active">Manage Cash Flow</a></mat-list-item>
-                    <mat-list-item role="listitem">Reports</mat-list-item>
-                </mat-list>
-            </mat-card-content>
-            <mat-card-actions>
-                <button mat-button (click)="onGLogout()"><img style='width: 50%' src='../../assets/signout.jpg'></button>
-            </mat-card-actions>
-          </mat-card>
-        
-    </div>
-  </mat-grid-tile>
-  <mat-grid-tile [colspan]="3" [rowspan]="9">
-    <div  class="maincontent">
-      <router-outlet></router-outlet>
-    </div>
-  </mat-grid-tile>
-</mat-grid-list>
+  <nav mat-tab-nav-bar [backgroundColor]="background">
+      <a mat-tab-link
+         routerLink="/home/asset" routerLinkActive="active"
+      > Asset </a>
+      <a mat-tab-link
+        routerLink="/home/opty" routerLinkActive="active"
+      > Opportunity </a>
+      <a mat-tab-link
+         routerLink="/home/quote" routerLinkActive="active"> Quote </a>
+  </nav>
+  <mat-grid-list cols="1" rowHeight="100px">-->
+      <mat-grid-tile [colspan]="1" [rowspan]="9">
+          <div  class="maincontent">
+            <router-outlet></router-outlet>
+          </div>
+      </mat-grid-tile>
+  </mat-grid-list>
+<!--<mat-grid-list cols="4" rowHeight="100px">-->
+  <!--<mat-grid-tile [colspan]="1" [rowspan]="9">-->
+    <!--<div  class="navigation">-->
+        <!--<mat-card class="card-home">-->
+            <!--<mat-card-header>-->
+              <!--<img [src]="kaasuuser?.photoURL" class="display-img"/>-->
+              <!--<mat-card-title>{{kaasuuser?.displayName}}</mat-card-title>-->
+              <!--<mat-card-subtitle>Renewal Manager</mat-card-subtitle>-->
+            <!--</mat-card-header>-->
+            <!--<mat-card-content>-->
+                <!--<mat-list role="list" >-->
+                    <!--<mat-list-item role="listitem"><a routerLink="/home/opty" routerLinkActive="active">Opportunity</a></mat-list-item>-->
+                    <!--<mat-list-item role="listitem">Reports</mat-list-item>-->
+                <!--</mat-list>-->
+            <!--</mat-card-content>-->
+            <!--<mat-card-actions>-->
+                <!--<button mat-button (click)="onGLogout()"><img style='width: 50%' src='../../assets/signout.jpg'></button>-->
+            <!--</mat-card-actions>-->
+          <!--</mat-card>-->
+        <!---->
+    <!--</div>-->
+  <!--</mat-grid-tile>-->
+
+  <!--<mat-grid-tile [colspan]="3" [rowspan]="9">-->
+    <!--<div  class="maincontent">-->
+      <!--<router-outlet></router-outlet>-->
+    <!--</div>-->
+  <!--</mat-grid-tile>-->
+<!--</mat-grid-list>-->

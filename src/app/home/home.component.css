@@ -5,7 +5,7 @@
     height: 100px;
   }
 .navigation{
-    background: salmon;
+    background: lightgray;
     top: 5px;
     position: absolute;
     padding: 2%;
@@ -18,7 +18,7 @@
   }
 
   .maincontent {
-      background: burlywood;
+      background: aliceblue;
       width: 100%;
       top: 5px;
       position: absolute;

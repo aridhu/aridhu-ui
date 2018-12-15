@@ -1,0 +1,63 @@
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+  <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="Optyname">
+    <th mat-header-cell *matHeaderCellDef> Opportunity Name </th>
+    <td mat-cell *matCellDef="let element"> {{element.Optyname}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="OptyAmount">
+    <th mat-header-cell *matHeaderCellDef> Amount </th>
+    <td mat-cell *matCellDef="let element"> {{element.OptyAmount}} </td>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="CloseDate">
+    <th mat-header-cell *matHeaderCellDef> Close Date </th>
+    <td mat-cell *matCellDef="let element"> {{element.CloseDate}} </td>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="AssetOwner">
+    <th mat-header-cell *matHeaderCellDef> Account Owner </th>
+    <td mat-cell *matCellDef="let element"> {{element.AssetOwner}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="SoldToParty">
+    <th mat-header-cell *matHeaderCellDef> Sold To </th>
+    <td mat-cell *matCellDef="let element"> {{element.SoldToParty}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="Tier2Party">
+    <th mat-header-cell *matHeaderCellDef> Tier 2 </th>
+    <td mat-cell *matCellDef="let element"> {{element.Tier2Party}} </td>
+  </ng-container>
+  <ng-container matColumnDef="select">
+    <th mat-header-cell *matHeaderCellDef>
+    </th>
+    <td mat-cell *matCellDef="let row">
+      <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu" [overlapTrigger]="false">
+        <button mat-menu-item>
+          <mat-icon>create</mat-icon>
+          <span>Create Quote</span>
+        </button>
+        <button mat-menu-item disabled>
+          <mat-icon>note</mat-icon>
+          <span>Quotes</span>
+        </button>
+      </mat-menu>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
